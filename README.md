@@ -1,6 +1,6 @@
 # 输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图
 
-**IP 手绘配图**（ip-handdrawn-illustrations）—— Drop in any article (Chinese or English); AI finds the highlights and draws vivid hand-drawn illustrations starring your own mascot.
+**IP 手绘**（ip-handdrawn）—— Drop in any article (Chinese or English); AI finds the highlights and draws vivid hand-drawn illustrations starring your own mascot.
 
 **只需要任意一篇文章，中英文都行。**
 
@@ -95,7 +95,7 @@
 ### Codex
 
 ```bash
-git clone https://github.com/KinGao294/ip-handdrawn-illustrations.git ~/.codex/skills/ip-handdrawn-illustrations
+git clone https://github.com/KinGao294/ip-handdrawn.git ~/.codex/skills/ip-handdrawn
 ```
 
 装好后在 Codex 里说「给这篇文章配图」。Codex 自带画图能力，最省事。
@@ -104,24 +104,24 @@ git clone https://github.com/KinGao294/ip-handdrawn-illustrations.git ~/.codex/s
 
 ```bash
 # 所有项目都能用
-git clone https://github.com/KinGao294/ip-handdrawn-illustrations.git ~/.cursor/skills/ip-handdrawn-illustrations
+git clone https://github.com/KinGao294/ip-handdrawn.git ~/.cursor/skills/ip-handdrawn
 # 或者只给当前项目用
-git clone https://github.com/KinGao294/ip-handdrawn-illustrations.git .cursor/skills/ip-handdrawn-illustrations
+git clone https://github.com/KinGao294/ip-handdrawn.git .cursor/skills/ip-handdrawn
 ```
 
-装好后在 Cursor 的 Agent 里说「给这篇文章配图」，或输入 `/ip-handdrawn-illustrations`。
+装好后在 Cursor 的 Agent 里说「给这篇文章配图」，或输入 `/ip-handdrawn`。
 
 ### Grok Bot
 
 把下面这句话发给 Grok Bot：
 
-> 把 https://github.com/KinGao294/ip-handdrawn-illustrations clone 到你的电脑里，把 SKILL.md 保存成我的私有 skill，参考图和案例都用这个目录里的。
+> 把 https://github.com/KinGao294/ip-handdrawn clone 到你的电脑里，把 SKILL.md 保存成我的私有 skill，参考图和案例都用这个目录里的。
 
 保存后，在输入框打 `/` 选它就能用。如果 `/` 里找不到，去 Settings → Plugins → Yours 里为当前 Bot 打开它。
 
 ### 其他工具
 
-Claude Code 也能用：`git clone https://github.com/KinGao294/ip-handdrawn-illustrations.git ~/.claude/skills/ip-handdrawn-illustrations`。其他支持 Agent Skills 的工具，clone 到它的 skills 目录即可。
+Claude Code 也能用：`git clone https://github.com/KinGao294/ip-handdrawn.git ~/.claude/skills/ip-handdrawn`。其他支持 Agent Skills 的工具，clone 到它的 skills 目录即可。
 
 ---
 

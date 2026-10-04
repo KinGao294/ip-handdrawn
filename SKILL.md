@@ -1,5 +1,5 @@
 ---
-name: ip-handdrawn-illustrations
+name: ip-handdrawn
 description: >-
   输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图（中英文文章都行）。Use this
   when the user wants 配图 / 文章插图 / 正文配图 / 封面图 / illustrations / shot list for any
@@ -8,7 +8,7 @@ description: >-
   mascot IP of the user's choice (default: 奶龙). Pure white background, black ink line
   art, the IP in its signature color, a few red/blue notes.
 ---
-# IP 正文配图（默认 IP：奶龙）
+# IP 手绘（默认 IP：奶龙）
 
 **输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图。只需要任意一篇文章，中英文都行。**
 
