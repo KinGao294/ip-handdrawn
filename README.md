@@ -2,7 +2,7 @@
 
 **IP 手绘**（ip-handdrawn）—— Drop in any article (Chinese or English); AI finds the highlights and draws vivid hand-drawn illustrations starring your own mascot.
 
-**只需要任意一篇文章，中英文都行。**
+**输入一整篇文章、一段话、一句话都行，中文英文都可以。** 最能发挥价值的是整篇文章：AI 会通读全文，自己挑出最值得画的几段。
 
 ## 你能得到什么
 
@@ -17,12 +17,12 @@
 ## 三步用起来
 
 1. **装上**：把这个仓库装进你的 AI 助手（见下面的[安装](#安装)）。
-2. **丢文章**：把文章发给它，说一句「给这篇文章配图」。中文、英文都可以，一段话也行。
+2. **丢文章**：把文章发给它，说一句「给这篇文章配图」。整篇文章最好；一段话、一句话也行，中文英文都可以。
 3. **拿图**：它先告诉你打算在哪几段配图、每张画什么；然后一张张画出来发给你。不满意就让它重画。
 
 默认主角是「奶龙」。想换成你自己的 IP，[看这里](#换成你自己的-ip)。
 
-## 看看效果：奶龙 ×《AI时代最重要的三点思考》
+## 看看效果：整篇文章配图 · 奶龙 ×《AI时代最重要的三点思考》
 
 下面 6 张图，都是 AI 从[《AI时代最重要的三点思考》原文](examples/kin-three-points/article.md)里自己挑出段落画的。每张图上面是对应的原文，下面一句话说明画了什么。
 
@@ -75,6 +75,34 @@
 ![06 把知识分享出去、挖成自己的护城河](examples/kin-three-points/images/06-moat.png)
 
 > 📌 这 6 张图里的奶龙形象前后一致，也可以当作奶龙的补充参考图使用。
+
+## English 示例：一句话也能配图
+
+不一定要整篇文章。下面每张图只输入了**一句英文**（转述自同一篇文章的关键句），图里的手写字也自动变成英文。来源见 [source.md](examples/one-sentence-en/source.md)，提示词见 [prompts/](examples/one-sentence-en/prompts/)。
+
+### 01 AI is not a 100-meter sprint; it's a 20-year marathon.
+
+> AI is not a 100-meter sprint; it's a 20-year marathon.
+
+🎨 奶龙背着枕头和水壶，提着灯笼，轻松跨过眼前的「sprint」终点线，走上通往「20 years」小旗的长路。
+
+![AI is not a 100-meter sprint; it's a 20-year marathon.](examples/one-sentence-en/images/01-marathon.png)
+
+### 02 AI has opened up the boundaries of every job.
+
+> AI has opened up the boundaries of every job.
+
+🎨 奶龙站在「my job」箱子上，用力拉开写着「AI」的大拉链，摄像机、画笔、代码窗口、话筒一起飞了出来。
+
+![AI has opened up the boundaries of every job.](examples/one-sentence-en/images/02-boundaries.png)
+
+### 03 Research gives me input, content gives me reach — two wheels turning together.
+
+> Research gives me input, content gives me reach — two wheels turning together.
+
+🎨 奶龙摇动一根曲柄，同时带动两只齿轮：左边吞进放大镜和书（input），右边放飞一串纸飞机（reach）。
+
+![Research gives me input, content gives me reach — two wheels turning together.](examples/one-sentence-en/images/03-two-wheels.png)
 
 ## 换成你自己的 IP
 
@@ -130,7 +158,7 @@ Claude Code 也能用：`git clone https://github.com/KinGao294/ip-handdrawn.git
 ### 它具体怎么工作
 
 1. **读全文**：判断文章语言（中文 / 英文），找出最值得画的「高光段落」——核心观点、转折、前后对比、循环、常见坑这类，一看图就能懂的地方。
-2. **出配图计划**（shot list）：每张图放在哪段后面、讲什么、IP 在做什么、图里写哪几个字。默认 4–8 张，短文 1–3 张。
+2. **出配图计划**（shot list）：每张图放在哪段后面、讲什么、IP 在做什么、图里写哪几个字。整篇文章默认 4–8 张，短文或一段话 1–3 张，一句话 1 张。
 3. **一张一张画**：每张只讲一件事，每篇文章都重新想比喻，不套旧图。
 4. **检查**：IP 有没有走样、有没有只站在旁边、画面是不是太满、字有没有写错。有问题就重画。
 5. **保存**：存到 `assets/<文章名>-illustrations/01-xxx.png`，按顺序编号，不覆盖已有文件。
@@ -174,7 +202,8 @@ ips/_template.md                 # IP 档案模板
 ips/nailong.md                   # 示例 IP：奶龙
 assets/character/nailong/        # 奶龙参考图（默认 ref-front-clean.png）
 assets/character/<ip-slug>/      # 你自己的 IP 参考图（引导时创建）
-examples/kin-three-points/       # 奶龙完整案例：原文 + 配图计划 + 成图 + 提示词
+examples/kin-three-points/       # 奶龙完整案例：整篇文章 + 配图计划 + 成图 + 提示词
+examples/one-sentence-en/        # 英文一句话示例：3 句英文 + 成图 + 提示词
 LICENSE                          # MIT
 ```
 

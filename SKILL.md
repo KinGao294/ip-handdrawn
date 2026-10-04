@@ -1,22 +1,24 @@
 ---
 name: ip-handdrawn
 description: >-
-  输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图（中英文文章都行）。Use this
+  输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图（整篇文章、一段话、一句话都行，中英文都可以）。Use this
   when the user wants 配图 / 文章插图 / 正文配图 / 封面图 / illustrations / shot list for any
-  article, post, paragraph or doc, in Chinese or English:
+  article, post, paragraph, single sentence or doc, in Chinese or English:
   it picks the highlight passages and draws hand-drawn 16:9 illustrations starring a
   mascot IP of the user's choice (default: 奶龙). Pure white background, black ink line
   art, the IP in its signature color, a few red/blue notes.
 ---
 # IP 手绘（默认 IP：奶龙）
 
-**输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图。只需要任意一篇文章，中英文都行。**
+**输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图。输入一整篇文章、一段话、一句话都行，中英文都可以。**
 
 ## 核心定位
 
-为任意一篇文章（或一段话）设计和生成 16:9 横版正文配图。目标不是商业插画或 PPT 信息图，而是把文章里的关键判断、流程、结构、状态或隐喻，变成一张干净、有记忆点、一眼能看懂的手绘解释图。
+为任意一篇文章、一段话或一句话设计和生成 16:9 横版正文配图。目标不是商业插画或 PPT 信息图，而是把文章里的关键判断、流程、结构、状态或隐喻，变成一张干净、有记忆点、一眼能看懂的手绘解释图。
 
-**中英文文章都支持**：先判断正文语言，图里的手写批注、shot list 和交付说明都用文章的语言（中文文章用中文批注，英文文章用英文批注；混合文章跟随正文主语言，或按用户要求）。
+**整篇文章是主打场景**（最能体现「自动找高光」的价值）；一段话、一句话也照样能画。
+
+**中英文都支持**：先判断正文语言，图里的手写批注、shot list 和交付说明都用文章的语言（中文文章用中文批注，英文文章用英文批注；混合文章跟随正文主语言，或按用户要求）。
 
 画面主角是**当前激活的 IP**（下文简称「IP」）：用户可以换成任何自己喜欢的形象；没有选择时默认使用内置示例 IP「奶龙」。IP 必须参与画面的核心动作，认真做一件有点荒诞但成立的事，不能只是站在旁边当装饰。
 
@@ -37,9 +39,11 @@ description: >-
 
 ### a. 展示能力
 
-先用这句话开场：**「输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图。」** 再补一两句：只需要任意一篇文章，中英文都行，一段话也可以；会先给出配图策略（shot list），再逐张生成手绘风 16:9 正文配图（纯白背景、黑色线稿、IP 是唯一彩色主角、少量红/蓝手写批注）。
+先用这句话开场：**「输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图。」** 再补一两句：整篇文章、一段话、一句话都行，中英文都可以；会先给出配图策略（shot list），再逐张生成手绘风 16:9 正文配图（纯白背景、黑色线稿、IP 是唯一彩色主角、少量红/蓝手写批注）。
 
-展示内置示例作为效果参考：奶龙案例 `examples/kin-three-points/`（原文 `article.md`、策略 `shotlist.md`、成图 `images/01-marathon.png` … `06-moat.png`）。能直接展示图片就附上 1–3 张（推荐 `01-marathon.png`、`03-cut-the-fence.png`、`05-two-wheels.png`），否则给出路径。
+**主打展示整篇文章案例**：奶龙 ×《AI时代最重要的三点思考》`examples/kin-three-points/`（原文 `article.md`、策略 `shotlist.md`、成图 `images/01-marathon.png` … `06-moat.png`）。能直接展示图片就附上 1–3 张（推荐 `01-marathon.png`、`03-cut-the-fence.png`、`05-two-wheels.png`），否则给出路径。
+
+再顺带提一句：一句话也能画，英文也行——见 `examples/one-sentence-en/`（3 句英文，各一张英文批注的图）。
 
 ### b. 询问是否换 IP
 
@@ -110,7 +114,7 @@ description: >-
 - IP 在图里做什么（结合档案里的性格和动作风格）
 - 建议元素、建议标注词（用文章的语言）
 
-默认 4-8 张；短文或单段文字 1-3 张；长文也不要轻易超过 9 张。
+整篇文章默认 4-8 张；短文或单段文字 1-3 张；一句话 1 张；长文也不要轻易超过 9 张。
 
 ### 3. 单张生成
 
