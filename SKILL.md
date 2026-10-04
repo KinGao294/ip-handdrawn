@@ -1,12 +1,15 @@
 ---
 name: nailong-image
 description: >-
-  use this when the user wants 配图 / 文章插图 / 正文配图 / 封面图 / shot list for a Chinese
-  article, post, paragraph or doc. Turns text into hand-drawn 16:9 explanatory
-  illustrations starring a mascot IP of the user's choice (default: 奶龙). Pure white
-  background, black ink line art, the IP in its signature color, a few red/blue notes.
+  输入一整篇文章，自动识别高光片段，生成生动形象的 IP 配图。Use this when the user wants
+  配图 / 文章插图 / 正文配图 / 封面图 / shot list for a Chinese article, post, paragraph or doc:
+  it picks the highlight passages and draws hand-drawn 16:9 illustrations starring a
+  mascot IP of the user's choice (default: 奶龙). Pure white background, black ink line
+  art, the IP in its signature color, a few red/blue notes.
 ---
 # IP 正文配图（默认 IP：奶龙）
+
+**输入一整篇文章，自动识别高光片段，生成生动形象的 IP 配图。**
 
 ## 核心定位
 
@@ -31,7 +34,7 @@ description: >-
 
 ### a. 展示能力
 
-用一两句话告诉用户：可以把**一段话或一整篇文章**变成手绘风 16:9 正文配图（纯白背景、黑色线稿、IP 是唯一彩色主角、少量红/蓝手写批注），并先给出配图策略（shot list）。
+先用这句话开场：**「输入一整篇文章，自动识别高光片段，生成生动形象的 IP 配图。」** 再补一两句：一段话也可以；会先给出配图策略（shot list），再逐张生成手绘风 16:9 正文配图（纯白背景、黑色线稿、IP 是唯一彩色主角、少量红/蓝手写批注）。
 
 展示内置示例作为效果参考：奶龙案例 `examples/kin-three-points/`（原文 `article.md`、策略 `shotlist.md`、成图 `images/01-marathon.png` … `06-moat.png`）。能直接展示图片就附上 1–3 张（推荐 `01-marathon.png`、`03-cut-the-fence.png`、`05-two-wheels.png`），否则给出路径。
 

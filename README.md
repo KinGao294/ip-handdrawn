@@ -1,8 +1,10 @@
-# Nailong-image · 用你喜欢的 IP 给文章画手绘配图
+# 输入一整篇文章，自动识别高光片段，生成生动形象的 IP 配图。
 
-> An agent skill that turns a paragraph or a whole article into hand-drawn 16:9 illustrations starring any mascot IP you choose — 奶龙 (Nailong) is just the built-in sample.
+> **Nailong-image** — Feed in a whole article; it spots the highlight passages and draws vivid hand-drawn 16:9 illustrations starring your own IP. 奶龙 (Nailong) is just the built-in sample.
 
-把一段话或一整篇中文文章，变成**干净、有记忆点、一眼能看懂的手绘解释图**：先出配图策略（shot list），再逐张生成 16:9 横版配图——纯白背景、黑色手绘线稿、大量留白，**你的 IP 是画面里唯一的彩色主角**，亲自完成核心动作，再配几句红 / 蓝手写批注。
+**推荐搭配：[Codex](#codex) · [Cursor](#cursor) · [Grok Bot](#grok-bot)**（Claude Code 等支持 Agent Skills 的工具也能用）
+
+它会先通读全文，挑出最值得画的「认知锚点」——核心判断、转折、闭环、对比，给出配图策略（shot list），再逐张生成 16:9 横版手绘配图：纯白背景、黑色手绘线稿、大量留白，**你的 IP 是画面里唯一的彩色主角**，亲自完成核心动作，再配几句红 / 蓝手写批注。
 
 **主角可以换成任何你喜欢的 IP / 吉祥物。** 仓库自带的「奶龙」只是一个示例 IP，也是没选 IP 时的默认主角。
 
@@ -10,27 +12,53 @@
 
 原文：[article.md](examples/kin-three-points/article.md) ｜ 配图策略：[shotlist.md](examples/kin-three-points/shotlist.md) ｜ 提示词：[prompts/](examples/kin-three-points/prompts/) ｜ 奶龙档案：[ips/nailong.md](ips/nailong.md)
 
-**01 不是冲刺，是马拉松** —— 奶龙拆掉起跑器挂上吊床，在 5 年 / 10 年 / 20 年的里程牌旁打盹：睡觉就是补给站。
+每张图上方引用的是它对应的原文段落（来自 [article.md](examples/kin-three-points/article.md)，按 [shotlist.md](examples/kin-three-points/shotlist.md) 对应），下面一句说明画了什么。
+
+### 01 不是冲刺，是马拉松
+
+> 所以我希望在接下来的人生里，真的能做到少熬夜、多运动，养成良好的作息习惯，然后和 AI 打一场持久战。 因为它确实不是一场百米冲刺，而是未来 5 年、10 年、20 年的一场马拉松。
+
+🎨 奶龙拆掉百米跑道的起跑器挂上吊床，在 5 年 / 10 年 / 20 年的里程牌旁穿着跑鞋打盹——睡觉就是补给站。
 
 ![01 不是冲刺，是马拉松](examples/kin-three-points/images/01-marathon.png)
 
-**02 80% 的力气花在揣摩上** —— 奶龙举着放大镜研究悬在半空的「老板眉毛」，真正想做的画架被冷落在角落。
+### 02 80% 的力气花在揣摩上
+
+> 为什么要做这个决定？因为我后来发现，在一份工作里，100% 的时间里可能只有 20% 是真正想做的那件事，剩下 80% 都是非常琐碎、又很费力的工作。举两个例子：准备 ppt 汇报时，一个措辞你需要反复揣摩几十轮；开会时老板一个眼神停顿两秒，你就要当面揣摩他是认可还是不满——这种揣摩心思的工作，是真正消耗心力的。
+
+🎨 奶龙举着巨型放大镜研究悬在半空的「老板眉毛」，身后是「第37版」ppt 草稿堆，真正想做的画架被冷落在角落。
 
 ![02 80% 的力气花在揣摩上](examples/kin-three-points/images/02-boss-eyebrow.png)
 
-**03 剪开岗位的围栏** —— 奶龙用写着「AI」的大剪刀剪开「岗位」栅栏，抱着摄像机和翻页动画本迈出去。
+### 03 剪开岗位的围栏
+
+> 但这几年，AI 来啦，我认为 AI 时代，我们的职业选择是比以往更宽的。 以前你做这个岗位，就只能做这个岗位；现在不是了。比如我以前完全不会做视频，AI 来了之后我开始会做视频剪辑甚至动效设计了。职业的边界被 AI 打开了，也更适合超级个体去闯。
+
+🎨 奶龙用刀刃写着「AI」的大剪刀剪开「岗位」栅栏，抱着摄像机和翻页动画本迈向开阔的外面。
 
 ![03 剪开岗位的围栏](examples/kin-three-points/images/03-cut-the-fence.png)
 
-**04 AI 是那根支点** —— 小小的奶龙压着「专长」砖块，借「AI」支点撬起比自己大十倍的气球。
+### 04 AI 是那根支点
+
+> AI 把杠杆放下了，每个人都有机会把自己的专长放大。这是一个更适合超级个体的时代，我们值得认真地试一试。
+
+🎨 小小的奶龙压着「专长」砖块，借「AI」支点撬起比自己大十倍的气球。
 
 ![04 AI 是那根支点](examples/kin-three-points/images/04-lever.png)
 
-**05 两个轮子一起转** —— 前轮是工具（输入），后轮是文章纸卷（输出），两个轮子一起转才能往前走。
+### 05 两个轮子一起转
+
+> 一年下来我发现，研究 AI 工具和做自媒体内容 IP，是一件非常互补的事。 研究给我输入，输出给我放大——输入没有输出，沉淀不下来；输出没有输入，很快就会枯竭。 两个轮子一起转，飞轮才转得起来。
+
+🎨 奶龙骑着自制自行车：前轮是工具（输入），后轮是文章纸卷（输出），两个轮子一起转车才往前走。
 
 ![05 两个轮子一起转](examples/kin-three-points/images/05-two-wheels.png)
 
-**06 自己挖的护城河** —— 奶龙把一页页笔记铲进河道，分享出去的知识反而挖宽了「个人IP」的护城河。
+### 06 自己挖的护城河
+
+> 当然，我们 SpacexAI 社区目前有 30 多个中文微信社群，如果你有一些好的想法，不只是想在线下和自己渠道分享，也想通过直播、文章或视频的方式做线上分享，也欢迎来找我聊。 这方面我非常开放——AI 时代需要有更多人把自己脑子里的专业知识拿出来分享，既能帮到别人，也能一点点把"个人影响力"^_^护城河建起来。
+
+🎨 奶龙把一页页笔记铲进河道，分享出去的知识反而挖宽了「个人IP」沙堡的护城河。
 
 ![06 自己挖的护城河](examples/kin-three-points/images/06-moat.png)
 
@@ -53,30 +81,42 @@
 
 ## 安装
 
-本仓库本身就是一个 skill 目录（入口是 [SKILL.md](SKILL.md)）。建议 `git clone` 成可写目录，因为换 IP 时 skill 会往里写入你的参考图、档案和配置。
+本仓库本身就是一个 skill 目录（入口是 [SKILL.md](SKILL.md)）。建议 `git clone` 成可写目录，因为换 IP 时 skill 会往里写入你的参考图、档案和配置。**最推荐在 Codex、Cursor、Grok Bot 里使用。**
 
-**Codex**
+### Codex
 
 ```bash
 git clone https://github.com/KinGao294/Nailong-image.git ~/.codex/skills/nailong-image
 ```
 
-**Claude Code**
+然后在 Codex 里直接说「给这篇文章配图」。Codex 自带图像生成，最适合逐张出图（见下方「用法」里的命令行写法）。
+
+### Cursor
 
 ```bash
 # 全局（所有项目可用）
-git clone https://github.com/KinGao294/Nailong-image.git ~/.claude/skills/nailong-image
+git clone https://github.com/KinGao294/Nailong-image.git ~/.cursor/skills/nailong-image
 # 或仅当前项目
-git clone https://github.com/KinGao294/Nailong-image.git .claude/skills/nailong-image
+git clone https://github.com/KinGao294/Nailong-image.git .cursor/skills/nailong-image
 ```
 
-**其他 Agent / Skills 插件**
+Cursor 会自动加载 `SKILL.md`；在 Agent 里说「给这篇文章配图」，或输入 `/nailong-image` 调用。需要生图时，可让 Agent 在终端里调用 Codex CLI（见「用法」）。
 
-把仓库 clone 到该工具的 skills 目录；如果工具不支持 skills，就把 `SKILL.md` 作为系统提示 / 规则文件加载，并保证它能读写本目录下的 `config/`、`ips/`、`assets/`。
+### Grok Bot
+
+把仓库链接发给 Grok Bot，并说：
+
+> 把 https://github.com/KinGao294/Nailong-image clone 到你的电脑里，把 SKILL.md 保存成我的私有 skill，参考图和案例都用这个目录里的。
+
+保存后在桌面端输入框里打 `/` 选择这个 skill 即可使用；如果 `/` 菜单里没有，到 Settings → Plugins → Yours 里为当前 Bot 启用它。
+
+### 其他工具（Claude Code 等）
+
+Claude Code：`git clone https://github.com/KinGao294/Nailong-image.git ~/.claude/skills/nailong-image`。其他支持 Agent Skills 的工具同理 clone 到对应 skills 目录；不支持 skills 的，把 `SKILL.md` 作为规则 / 系统提示加载，并保证它能读写本目录下的 `config/`、`ips/`、`assets/`。
 
 ## 用法
 
-装好后直接对助手说「给这篇文章配图」「帮这段话画张图」「先出个 shot list」即可。
+装好后直接把文章丢给助手，说「给这篇文章配图」「帮这段话画张图」「先出个 shot list」即可——它会自己挑出高光段落来画。
 
 需要手动生图时，以 Codex CLI 为例——**一次调用只出一张图**，先附 IP 参考图，再从 stdin 传提示词（`-i` 可接多个文件，所以提示词用 `-` 读 stdin）：
 
