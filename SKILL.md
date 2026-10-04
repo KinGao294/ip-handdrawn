@@ -1,14 +1,14 @@
 ---
 name: ip-handdrawn
 description: >-
-  输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图（整篇文章、一段话、一句话都行，中英文都可以）。Use this
+  IP 手绘：你的 IP 内容配图神器。输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图（整篇文章、一段话、一句话都行，中英文都可以）。Use this
   when the user wants 配图 / 文章插图 / 正文配图 / 封面图 / illustrations / shot list for any
   article, post, paragraph, single sentence or doc, in Chinese or English:
   it picks the highlight passages and draws hand-drawn 16:9 illustrations starring a
   mascot IP of the user's choice (default: 奶龙). Pure white background, black ink line
   art, the IP in its signature color, a few red/blue notes.
 ---
-# IP 手绘（默认 IP：奶龙）
+# IP 手绘：你的 IP 内容配图神器（默认 IP：奶龙）
 
 **输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图。输入一整篇文章、一段话、一句话都行，中英文都可以。**
 

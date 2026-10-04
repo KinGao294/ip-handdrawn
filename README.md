@@ -1,6 +1,8 @@
 # 输入一整篇文章，AI 自动识别高光片段，生成生动形象的 IP 手绘配图
 
-**IP 手绘**（ip-handdrawn）: Drop in an article in Chinese or English. AI picks the highlights and turns them into vivid hand-drawn scenes starring your mascot.
+**IP 手绘：你的 IP 内容配图神器**（ip-handdrawn）
+
+Drop in an article in Chinese or English. AI picks the highlights and turns them into vivid hand-drawn scenes starring your mascot.
 
 输入一整篇文章、一段话、一句话都行，中文英文都可以。尤其适合长文章：AI 会读完全文，挑出最值得画的几段，你不用逐段想配图。
 
